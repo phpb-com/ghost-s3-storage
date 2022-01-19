@@ -65,7 +65,7 @@
     "commit": "git-cz",
     "fix": "standard --fix",
     "lint": "standard --verbose",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "semantic-release": "semantic-release",
     "test": "exit 0"
   },
