@@ -1,18 +1,17 @@
 # Ghost storage adapter S3
 
+**This is a fork of the original [ghost-storage-adapter-s3](https://github.com/colinmeinke/ghost-storage-adapter-s3)  (by [Colin Meinke](https://github.com/colinmeinke)). It is not yet usable as is an and needs further development to function.**
+
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bb71a96adca24c828a2b56a937a0af23)](https://app.codacy.com/gh/phpb-com/ghost-s3-storage?utm_source=github.com&utm_medium=referral&utm_content=phpb-com/ghost-s3-storage&utm_campaign=Badge_Grade_Settings)
 
 An AWS S3 storage adapter for Ghost 1.x
 
-For Ghost 0.10.x and 0.11.x support check out
-[Ghost storage adapter s3 v1.3.0](https://github.com/colinmeinke/ghost-storage-adapter-s3/releases/tag/v1.3.0).
-
 ## Installation
 
 ```shell
-npm install ghost-storage-adapter-s3
+npm install ghost-s3-storage
 mkdir -p ./content/adapters/storage
-cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3
+cp -r ./node_modules/ghost-s3-storage ./content/adapters/storage/s3
 ```
 
 ## Configuration
@@ -38,12 +37,6 @@ cp -r ./node_modules/ghost-storage-adapter-s3 ./content/adapters/storage/s3
 Note 1: Be sure to include "//" or the appropriate protocol within your assetHost string/variable to ensure that your site's domain is not prepended to the CDN URL.
 
 Note 2: if your s3 bucket enforces SSE use serverSideEncryption with the [appropriate supported](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property) value.
-
-Note 3: if your s3 providers requires path style you can enable it with `forcePathStyle`
-
-Note 4: if you use CloudFront the object ACL does not need to be set to "public-read"
-
-Note 5: [Support for AWS4-HMAC-SHA256](https://github.com/colinmeinke/ghost-storage-adapter-s3/issues/43)
 
 ### Via environment variables
 

@@ -3,9 +3,9 @@ import BaseStore from 'ghost-storage-base'
 import { join } from 'path'
 import { readFile } from 'fs'
 
-const readFileAsync = fp => new Promise((resolve, reject) => readFile(fp, (err, data) => err ? reject(err) : resolve(data)))
-const stripLeadingSlash = s => s.indexOf('/') === 0 ? s.substring(1) : s
-const stripEndingSlash = s => s.indexOf('/') === (s.length - 1) ? s.substring(0, s.length - 1) : s
+const readFileAsync = (fp) => new Promise((resolve, reject) => readFile(fp, (err, data) => err ? reject(err) : resolve(data)))
+const stripLeadingSlash = (s) => s.indexOf('/') === 0 ? s.substring(1) : s
+const stripEndingSlash = (s) => s.indexOf('/') === (s.length - 1) ? s.substring(0, s.length - 1) : s
 
 class Store extends BaseStore {
   constructor (config = {}) {
@@ -105,7 +105,7 @@ class Store extends BaseStore {
         this.s3()
           .putObject(config, (err, data) => err ? reject(err) : resolve(`${this.host}/${fileName}`))
       })
-        .catch(err => reject(err))
+        .catch((err) => reject(err))
     })
   }
 
@@ -118,7 +118,7 @@ class Store extends BaseStore {
         })
         .on('httpHeaders', (statusCode, headers, response) => res.set(headers))
         .createReadStream()
-        .on('error', err => {
+        .on('error', (err) => {
           res.status(404)
           next(err)
         })
