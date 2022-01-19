@@ -1,5 +1,7 @@
 # Ghost storage adapter S3
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/22561d8d5eba43cf894556192334140c)](https://app.codacy.com/gh/phpb-com/ghost-storage-adapter-s3?utm_source=github.com&utm_medium=referral&utm_content=phpb-com/ghost-storage-adapter-s3&utm_campaign=Badge_Grade_Settings)
+
 An AWS S3 storage adapter for Ghost 1.x
 
 For Ghost 0.10.x and 0.11.x support check out
