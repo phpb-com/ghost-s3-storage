@@ -1,6 +1,6 @@
 # Ghost storage adapter S3
 
-**This is a fork of the original [ghost-storage-adapter-s3](https://github.com/colinmeinke/ghost-storage-adapter-s3)  (by [Colin Meinke](https://github.com/colinmeinke)). It is not yet usable as is an and needs further development to function.**
+**This is a fork of the original [ghost-storage-adapter-s3](https://github.com/colinmeinke/ghost-storage-adapter-s3)  (by [Colin Meinke](https://github.com/colinmeinke)). It is not yet usable as is, and needs further development to function.**
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bb71a96adca24c828a2b56a937a0af23)](https://app.codacy.com/gh/phpb-com/ghost-s3-storage?utm_source=github.com&utm_medium=referral&utm_content=phpb-com/ghost-s3-storage&utm_campaign=Badge_Grade_Settings)
 
